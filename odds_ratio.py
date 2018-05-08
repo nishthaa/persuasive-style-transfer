@@ -91,18 +91,18 @@ def get_odds_ratio(reader):
     limit = 100
     count = 0
     highORWords = []
-    #print('High Odds Ratio:')
+    # print('High Odds Ratio:')
     for word in sorted(oddsratiodict, key=oddsratiodict.get, reverse=True):
         if count >= limit:
             break
         pwp, pwa, nwp, nwa = word_comment_counts[word]
         if pwp <= 1 or nwp <= 1:
             continue
-        #print(word, str(oddsratiodict[word]), str(word_comment_counts[word]))
+        # print(word, str(oddsratiodict[word]), str(word_comment_counts[word]))
         highORWords.append(word)
         count = count + 1
 
-    #print('\n\nLow Odds Ratio:')
+    # print('\n\nLow Odds Ratio:')
     count = 0
     lowORWords = []
     for word in sorted(oddsratiodict, key=oddsratiodict.get):
@@ -111,7 +111,7 @@ def get_odds_ratio(reader):
         pwp, pwa, nwp, nwa = word_comment_counts[word]
         if pwp <= 1 or nwp <= 1:
             continue
-        #print(word, str(oddsratiodict[word]), str(word_comment_counts[word]))
+        # print(word, str(oddsratiodict[word]), str(word_comment_counts[word]))
         lowORWords.append(word)
         count = count + 1
 
