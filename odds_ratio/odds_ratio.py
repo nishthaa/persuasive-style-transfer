@@ -21,7 +21,7 @@ def process(lobject):
 #Read the file
 
 
-def get_odds_ratio(file):
+def get_odds_ratio(reader):
 	title_tokenizer_instance = title_tokenizer()
 	num_pos_comments = 0
 	num_neg_comments = 0
@@ -29,53 +29,46 @@ def get_odds_ratio(file):
 	word_num_neg_comments = {}
 	all_word_set = set()
 
+	for file in reader:
+		try:
+			fp = open("/Volumes/Brihi/convote_v1.1/data_stage_one/test_set/"+file)
+			text = fp.read()
+			tag = file[-5]
 
-	try:
-		fp = open("/Volumes/Brihi/convote_v1.1/data_stage_one/test_set/"+file)
-		text = fp.read()
-		tag = file[-5]
+			#Annotator Pipeline
+			toks = process(text)
 
-		#Annotator Pipeline
-		toks = process(text)
-		# print(toks)
-		# data = pos_tag_annotator_instance.process(data)
-		# data = quantity_count_annotator_instance.process(data)
-		# data = stopword_annotator_instance.process(data)
-		# data = word_vector_annotator_instance.process(data)
+			#Doing something with annotator output
+			all_word_set.update(toks)
+			seen_tokens = []
+			if tag == 'Y':
+				num_pos_comments = num_pos_comments + 1
+				for token in toks:
+					if token in seen_tokens:
+						continue
+					else:
+						seen_tokens.append(token)
+					if token in word_num_pos_comments:
+						word_num_pos_comments[token] = word_num_pos_comments[token] + 1
+					else:
+						word_num_pos_comments[token] = 1
 
-		#Doing something with annotator output
-		all_word_set.update(toks)
-		seen_tokens = []
-		if tag == 'Y':
-			num_pos_comments = num_pos_comments + 1
-			for token in toks:
-				if token in seen_tokens:
-					continue
-				else:
-					seen_tokens.append(token)
-				if token in word_num_pos_comments:
-					word_num_pos_comments[token] = word_num_pos_comments[token] + 1
-				else:
-					word_num_pos_comments[token] = 1
-
-		if tag == 'N':
-			num_neg_comments = num_neg_comments + 1
-			for token in toks:
-				if token in seen_tokens:
-					continue
-				else:
-					seen_tokens.append(token)
-				if token in word_num_neg_comments:
-					word_num_neg_comments[token] = word_num_neg_comments[token] + 1
-				else:
-					word_num_neg_comments[token] = 1
-	except:
-		pass
+			if tag == 'N':
+				num_neg_comments = num_neg_comments + 1
+				for token in toks:
+					if token in seen_tokens:
+						continue
+					else:
+						seen_tokens.append(token)
+					if token in word_num_neg_comments:
+						word_num_neg_comments[token] = word_num_neg_comments[token] + 1
+					else:
+						word_num_neg_comments[token] = 1
+		except:
+			pass
 
 
-		#Computing Odds Ratio for each word
-	print(word_num_pos_comments)
-	print(word_num_neg_comments)
+	
 	oddsratiodict = {}
 	word_comment_counts = {}
 	for word in all_word_set:
@@ -123,19 +116,9 @@ def get_odds_ratio(file):
 		count = count + 1
 
 
-
-
-
-
 reader = os.listdir("/Volumes/Brihi/convote_v1.1/data_stage_one/test_set/")
-
-
-count = 0
-for file in reader:
-	print("Progress count",count)
-	get_odds_ratio(file)
-	count+=1
-	break
+get_odds_ratio(reader)
+	
 	
 
 
