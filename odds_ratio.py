@@ -32,7 +32,7 @@ def get_odds_ratio(reader):
     for file in reader:
         try:
             fp = open(
-                "/Users/adsrc/work/ibm/pst/data/convotev1.1/data_stage_one/test_set/" + file)
+                "/Users/adsrc/work/ibm/pst/data/convotev1.1/data_stage_one/training_set/" + file)
             text = fp.read()
             tag = file[-5]
 
@@ -119,5 +119,5 @@ def get_odds_ratio(reader):
 
 if __name__ == '__main__':
     reader = os.listdir(
-        "/Users/adsrc/work/ibm/pst/data/convotev1.1/data_stage_one/test_set/")
+        "/Users/adsrc/work/ibm/pst/data/convotev1.1/data_stage_one/training_set/")
     get_odds_ratio(reader)

@@ -30,6 +30,7 @@ from nltk import word_tokenize
 def pre_process(text, stop_words):
 
     lower = text.lower()
+    mappings = {}
     content = lower.split()
     word_list = []
     for i in content:
@@ -40,8 +41,13 @@ def pre_process(text, stop_words):
     number_tokens = [re.sub(r'[\d]', ' ', i) for i in word_list]
     number_tokens = ' '.join(number_tokens).split()
     stemmed_tokens = [p_stemmer.stem(i) for i in number_tokens]
+    for i in range(len(stemmed_tokens)):
+        if stemmed_tokens[i] not in mappings and len(stemmed_tokens[i]) > 1:
+
+            mappings[stemmed_tokens[i]] = word_list[i]
+
     length_tokens = [i for i in stemmed_tokens if len(i) > 1]
-    return length_tokens
+    return length_tokens, mappings
 
 
 DIR_LINK_TRAIN = "data/convotev1.1/data_stage_one/training_set/"
@@ -106,10 +112,10 @@ tokenizer = RegexpTokenizer(r'\w+')
 stop_words = set(nltk.corpus.stopwords.words('english'))
 p_stemmer = PorterStemmer()
 
-
+mappings = None
 for speech in speeches:
 
-    clean_speech = pre_process(speech, stop_words)
+    clean_speech, mappings = pre_process(speech, stop_words)
 
     if clean_speech:
 
@@ -162,18 +168,25 @@ vectors = []
 
 for content in tspeeches:
 
-    vectors.append(d2v_model.infer_vector(pre_process(content, stop_words)))
+    tmp, mp = pre_process(content, stop_words)
+    vectors.append(d2v_model.infer_vector(tmp))
 
 
 num_clusters = 10
 
 km = KMeans(n_clusters=num_clusters, random_state=10)
 
+
 # km.fit(vectors)
 
 cluster_labels = km.fit_predict(vectors)
 
 clusters = km.labels_.tolist()
+
+print("Top terms per cluster:")
+print()
+# sort cluster centers by proximity to centroid
+
 
 # print(clusters)
 
