@@ -20,6 +20,32 @@ stemmer = SnowballStemmer("english")
 # the text that it is passed
 
 
+def purity_score(clusters, classes):
+    """
+    Calculate the purity score for the given cluster assignments and ground truth classes
+
+    :param clusters: the cluster assignments array
+    :type clusters: numpy.array
+
+    :param classes: the ground truth classes
+    :type classes: numpy.array
+
+    :returns: the purity score
+    :rtype: float
+    """
+
+    A = np.c_[(clusters, classes)]
+
+    n_accurate = 0.
+
+    for j in np.unique(A[:, 0]):
+        z = A[A[:, 0] == j, 1]
+        x = np.argmax(np.bincount(z))
+        n_accurate += len(z[z == x])
+
+    return n_accurate / A.shape[0]
+
+
 def tokenize_and_stem(text):
     # first tokenize by sentence, then by word to ensure that punctuation is
     # caught as it's own token
@@ -54,10 +80,18 @@ DIR_LINK_TEST = "data/convotev1.1/data_stage_one/test_set/"
 training_speeches = os.listdir(DIR_LINK_TRAIN)
 
 tmp = []
+label_ref = {}
+labels = []
+z = 0
 for speech in training_speeches:
 
     if speech[-5] == "Y":
         tmp.append(speech)
+        if speech[:3] not in label_ref:
+            label_ref[speech[:3]] = z
+            z += 1
+        labels.append(label_ref[speech[:3]])
+
 training_speeches = tmp
 
 fps = [open(DIR_LINK_TRAIN + file) for file in training_speeches]
@@ -103,10 +137,11 @@ km = KMeans(n_clusters=num_clusters, random_state=10)
 
 km.fit(tfidf_matrix)
 
-clusters = km.labels_.tolist()
-
 
 clusters = km.labels_.tolist()
+
+print("Purity score: ", purity_score(clusters, labels))
+
 
 speeches = {'title': training_speeches,
             'speech_content': train_content, 'cluster': clusters}
@@ -125,16 +160,26 @@ order_centroids = km.cluster_centers_.argsort()[:, :: -1]
 
 central_words = []
 
-for i in range(num_clusters):
-    print("Cluster %d words:" % i, end='')
+true_k = np.unique(labels).shape[0]
 
-    for ind in order_centroids[i, : 6]:  # replace 6 with n words per cluster
-        print(' %s' % vocab_frame.ix[terms[ind].split(' ')].values.tolist()[
-              0][0], end=',')
-        central_words.append(vocab_frame.ix[terms[ind].split(' ')].values.tolist()[
-            0][0])
-    print()  # add whitespace
-    print()  # add whitespace
+terms = tfidf_vectorizer.get_feature_names()
+for i in range(true_k):
+    print("Cluster %d:" % i, end='')
+    for ind in order_centroids[i, :10]:
+        print(' %s' % terms[ind], end='\n')
+    print()
+
+
+# for i in range(num_clusters):
+#     print("Cluster %d words:" % i, end='')
+
+#     for ind in order_centroids[i, : 6]:  # replace 6 with n words per cluster
+#         print(' %s' % vocab_frame.ix[terms[ind].split(' ')].values.tolist()[
+#               0][0], end=',')
+#         central_words.append(vocab_frame.ix[terms[ind].split(' ')].values.tolist()[
+#             0][0])
+#     print()  # add whitespace
+#     print()  # add whitespace
 
     # print("Cluster %d titles:" % i, end='')
     # for title in frame.ix[i]['title'].values.tolist():
@@ -170,24 +215,24 @@ for key in tracker:
 
     print(key, i)
 
-highORwords, lowORwords = get_odds_ratio(os.listdir(DIR_LINK_TRAIN))
+# highORwords, lowORwords = get_odds_ratio(os.listdir(DIR_LINK_TRAIN))
 
 
-replacement = {}
-print("$$$$$$$$$$$$$$$$$$$$$")
-print(highORwords)
-for word1 in highORwords:
+# replacement = {}
+# print("$$$$$$$$$$$$$$$$$$$$$")
+# print(highORwords)
+# for word1 in highORwords:
 
-    if word1 in central_words:
-        print(word1)
+#     if word1 in central_words:
+#         print(word1)
 
-    # max_sim = -1
+#     # max_sim = -1
 
-    # for word2 in lowORwords:
+#     # for word2 in lowORwords:
 
-    #     sim = model.similarity(word1, word2)
+#     #     sim = model.similarity(word1, word2)
 
-    #     if sim > max_sim:
+#     #     if sim > max_sim:
 
-    #         max_sim = sim
-    #         replacement[word1] = word2
+#     #         max_sim = sim
+#     #         replacement[word1] = word2
