@@ -1,0 +1,7 @@
+50
+Traceback (most recent call last):
+  File "validation_tfidf.py", line 115, in <module>
+    fps_n = [open(DIR_LINK_TRAIN + file) for file in training_speeches_n]
+  File "validation_tfidf.py", line 115, in <listcomp>
+    fps_n = [open(DIR_LINK_TRAIN + file) for file in training_speeches_n]
+OSError: [Errno 23] Too many open files in system: 'data/convotev1.1/data_stage_one/training_set/088_400237_1131072_DON.txt'

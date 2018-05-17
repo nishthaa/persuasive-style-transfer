@@ -1,0 +1,1025 @@
+20
+Purity score:  0.18692228688805204
+9     236
+22    204
+10    130
+25    114
+7     100
+20     99
+11     95
+24     87
+15     85
+1      84
+14     84
+5      80
+21     77
+16     75
+30     73
+17     72
+13     71
+29     70
+18     69
+12     69
+28     68
+3      68
+36     67
+26     62
+4      62
+32     59
+27     59
+23     58
+6      54
+8      53
+31     50
+33     50
+0      47
+19     47
+34     45
+2      45
+35     44
+37      9
+Name: cluster, dtype: int64
+Top terms per cluster:
+
+Cluster 0: 's
+ work
+ support
+ year
+ state
+ chairman
+ speaker
+ committe
+ time
+ want
+
+Cluster 1: mr. chairman
+ chairman
+ time
+ yield
+ amend
+ member
+ 's
+ work
+ support
+ gentleman
+
+Cluster 2: amend
+ speaker
+ mr. speaker
+ committe
+ member
+ time
+ 's
+ make
+ year
+ yield
+
+Cluster 3: committe
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ time
+ becaus
+ work
+ year
+
+Cluster 4: state
+ 's
+ support
+ need
+ becaus
+ time
+ speaker
+ make
+ work
+ member
+
+Cluster 5: mr. speaker
+ speaker
+ 's
+ year
+ work
+ need
+ want
+ yield
+ time
+ make
+
+Cluster 6: committe
+ chairman
+ mr. chairman
+ yield
+ gentleman
+ member
+ time
+ make
+ amend
+ work
+
+Cluster 7: amend
+ chairman
+ 's
+ state
+ becaus
+ mr. chairman
+ make
+ gentleman
+ year
+ need
+
+Cluster 8: yield
+ mr. chairman
+ amend
+ becaus
+ chairman
+ committe
+ gentleman
+ make
+ member
+ mr. speaker
+
+Cluster 9: chairman
+ gentleman
+ mr. chairman
+ yield
+ member
+ state
+ 's
+ make
+ want
+ work
+
+Cluster 10: gentleman
+ yield
+ time
+ amend
+ speaker
+ support
+ member
+ becaus
+ chairman
+ committe
+
+Cluster 11: state
+ chairman
+ member
+ mr. chairman
+ amend
+ time
+ year
+ 's
+ work
+ need
+
+Cluster 12: member
+ committe
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ time
+ want
+ work
+
+Cluster 13: speaker
+ mr. speaker
+ time
+ becaus
+ yield
+ 's
+ support
+ want
+ gentleman
+ member
+
+Cluster 14: year
+ 's
+ state
+ need
+ chairman
+ time
+ support
+ becaus
+ work
+ amend
+
+Cluster 15: mr. chairman
+ chairman
+ want
+ 's
+ gentleman
+ state
+ time
+ support
+ becaus
+ need
+
+Cluster 16: work
+ gentleman
+ chairman
+ committe
+ speaker
+ time
+ year
+ want
+ mr. speaker
+ mr. chairman
+
+Cluster 17: time
+ chairman
+ mr. chairman
+ yield
+ year
+ support
+ make
+ gentleman
+ 's
+ speaker
+
+Cluster 18: want
+ year
+ work
+ gentleman
+ make
+ state
+ becaus
+ support
+ speaker
+ need
+
+Cluster 19: member
+ speaker
+ mr. speaker
+ yield
+ time
+ gentleman
+ support
+ want
+ 's
+ state
+
+Cluster 20: amend
+ chairman
+ mr. chairman
+ time
+ gentleman
+ yield
+ state
+ need
+ member
+ committe
+
+Cluster 21: support
+ mr. speaker
+ speaker
+ time
+ becaus
+ year
+ want
+ 's
+ gentleman
+ yield
+
+Cluster 22: speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ 's
+ time
+ amend
+ make
+ becaus
+
+Cluster 23: need
+ speaker
+ mr. speaker
+ time
+ 's
+ make
+ want
+ year
+ gentleman
+ support
+
+Cluster 24: 's
+ make
+ chairman
+ state
+ support
+ year
+ want
+ time
+ mr. chairman
+ becaus
+
+Cluster 25: amend
+ mr. chairman
+ chairman
+ 's
+ gentleman
+ time
+ yield
+ make
+ work
+ committe
+
+Cluster 26: need
+ chairman
+ year
+ mr. chairman
+ time
+ make
+ state
+ work
+ gentleman
+ support
+
+Cluster 27: support
+ 's
+ chairman
+ year
+ mr. chairman
+ work
+ need
+ make
+ state
+ time
+
+Cluster 28: gentleman
+ time
+ work
+ chairman
+ 's
+ want
+ mr. chairman
+ amend
+ committe
+ make
+
+Cluster 29: becaus
+ time
+ chairman
+ mr. chairman
+ year
+ make
+ gentleman
+ need
+ work
+ member
+
+Cluster 30: committe
+ speaker
+ member
+ year
+ work
+ chairman
+ 's
+ time
+ make
+ support
+
+Cluster 31: chairman
+ time
+ gentleman
+ mr. chairman
+ yield
+ want
+ support
+ state
+ member
+ year
+
+Cluster 32: state
+ mr. speaker
+ speaker
+ time
+ year
+ gentleman
+ support
+ 's
+ work
+ yield
+
+Cluster 33: amend
+ support
+ chairman
+ mr. chairman
+ gentleman
+ need
+ state
+ time
+ 's
+ want
+
+Cluster 34: make
+ speaker
+ mr. speaker
+ year
+ chairman
+ mr. chairman
+ becaus
+ work
+ time
+ 's
+
+Cluster 35: mr. chairman
+ chairman
+ yield
+ member
+ need
+ amend
+ becaus
+ committe
+ gentleman
+ make
+
+Cluster 36: time
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ need
+ make
+ year
+ want
+ becaus
+
+Cluster 37: yield
+ mr. chairman
+ amend
+ becaus
+ chairman
+ committe
+ gentleman
+ make
+ member
+ mr. speaker
+
+
+
+282 0
+519 0
+168 0
+088 1
+426 0
+372 0
+031 2
+132 1
+470 1
+645 0
+475 0
+038 0
+090 0
+321 0
+635 0
+621 2
+585 1
+547 0
+108 0
+006 0
+548 0
+616 0
+144 0
+360 0
+013 1
+239 0
+495 0
+079 0
+534 0
+016 0
+371 0
+631 0
+507 0
+539 0
+559 0
+533 0
+084 0
+467 0
+After replacement
+Purity score:  0.18692228688805204
+9     236
+22    204
+10    130
+25    114
+7     100
+20     99
+11     95
+24     87
+15     85
+1      84
+14     84
+5      80
+21     77
+16     75
+30     73
+17     72
+13     71
+29     70
+18     69
+12     69
+28     68
+3      68
+36     67
+26     62
+4      62
+32     59
+27     59
+23     58
+6      54
+8      53
+31     50
+33     50
+0      47
+19     47
+34     45
+2      45
+35     44
+37      9
+Name: cluster, dtype: int64
+Top terms per cluster:
+
+Cluster 0: 's
+ work
+ support
+ year
+ state
+ chairman
+ speaker
+ committe
+ time
+ want
+
+Cluster 1: mr. chairman
+ chairman
+ time
+ yield
+ amend
+ member
+ 's
+ work
+ support
+ gentleman
+
+Cluster 2: amend
+ speaker
+ mr. speaker
+ committe
+ member
+ time
+ 's
+ make
+ year
+ yield
+
+Cluster 3: committe
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ time
+ becaus
+ work
+ year
+
+Cluster 4: state
+ 's
+ support
+ need
+ becaus
+ time
+ speaker
+ make
+ work
+ member
+
+Cluster 5: mr. speaker
+ speaker
+ 's
+ year
+ work
+ need
+ want
+ yield
+ time
+ make
+
+Cluster 6: committe
+ chairman
+ mr. chairman
+ yield
+ gentleman
+ member
+ time
+ make
+ amend
+ work
+
+Cluster 7: amend
+ chairman
+ 's
+ state
+ becaus
+ mr. chairman
+ make
+ gentleman
+ year
+ need
+
+Cluster 8: yield
+ mr. chairman
+ amend
+ becaus
+ chairman
+ committe
+ gentleman
+ make
+ member
+ mr. speaker
+
+Cluster 9: chairman
+ gentleman
+ mr. chairman
+ yield
+ member
+ state
+ 's
+ make
+ want
+ work
+
+Cluster 10: gentleman
+ yield
+ time
+ amend
+ speaker
+ support
+ member
+ becaus
+ chairman
+ committe
+
+Cluster 11: state
+ chairman
+ member
+ mr. chairman
+ amend
+ time
+ year
+ 's
+ work
+ need
+
+Cluster 12: member
+ committe
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ time
+ want
+ work
+
+Cluster 13: speaker
+ mr. speaker
+ time
+ becaus
+ yield
+ 's
+ support
+ want
+ gentleman
+ member
+
+Cluster 14: year
+ 's
+ state
+ need
+ chairman
+ time
+ support
+ becaus
+ work
+ amend
+
+Cluster 15: mr. chairman
+ chairman
+ want
+ 's
+ gentleman
+ state
+ time
+ support
+ becaus
+ need
+
+Cluster 16: work
+ gentleman
+ chairman
+ committe
+ speaker
+ time
+ year
+ want
+ mr. speaker
+ mr. chairman
+
+Cluster 17: time
+ chairman
+ mr. chairman
+ yield
+ year
+ support
+ make
+ gentleman
+ 's
+ speaker
+
+Cluster 18: want
+ year
+ work
+ gentleman
+ make
+ state
+ becaus
+ support
+ speaker
+ need
+
+Cluster 19: member
+ speaker
+ mr. speaker
+ yield
+ time
+ gentleman
+ support
+ want
+ 's
+ state
+
+Cluster 20: amend
+ chairman
+ mr. chairman
+ time
+ gentleman
+ yield
+ state
+ need
+ member
+ committe
+
+Cluster 21: support
+ mr. speaker
+ speaker
+ time
+ becaus
+ year
+ want
+ 's
+ gentleman
+ yield
+
+Cluster 22: speaker
+ mr. speaker
+ yield
+ gentleman
+ chairman
+ 's
+ time
+ amend
+ make
+ becaus
+
+Cluster 23: need
+ speaker
+ mr. speaker
+ time
+ 's
+ make
+ want
+ year
+ gentleman
+ support
+
+Cluster 24: 's
+ make
+ chairman
+ state
+ support
+ year
+ want
+ time
+ mr. chairman
+ becaus
+
+Cluster 25: amend
+ mr. chairman
+ chairman
+ 's
+ gentleman
+ time
+ yield
+ make
+ work
+ committe
+
+Cluster 26: need
+ chairman
+ year
+ mr. chairman
+ time
+ make
+ state
+ work
+ gentleman
+ support
+
+Cluster 27: support
+ 's
+ chairman
+ year
+ mr. chairman
+ work
+ need
+ make
+ state
+ time
+
+Cluster 28: gentleman
+ time
+ work
+ chairman
+ 's
+ want
+ mr. chairman
+ amend
+ committe
+ make
+
+Cluster 29: becaus
+ time
+ chairman
+ mr. chairman
+ year
+ make
+ gentleman
+ need
+ work
+ member
+
+Cluster 30: committe
+ speaker
+ member
+ year
+ work
+ chairman
+ 's
+ time
+ make
+ support
+
+Cluster 31: chairman
+ time
+ gentleman
+ mr. chairman
+ yield
+ want
+ support
+ state
+ member
+ year
+
+Cluster 32: state
+ mr. speaker
+ speaker
+ time
+ year
+ gentleman
+ support
+ 's
+ work
+ yield
+
+Cluster 33: amend
+ support
+ chairman
+ mr. chairman
+ gentleman
+ need
+ state
+ time
+ 's
+ want
+
+Cluster 34: make
+ speaker
+ mr. speaker
+ year
+ chairman
+ mr. chairman
+ becaus
+ work
+ time
+ 's
+
+Cluster 35: mr. chairman
+ chairman
+ yield
+ member
+ need
+ amend
+ becaus
+ committe
+ gentleman
+ make
+
+Cluster 36: time
+ speaker
+ mr. speaker
+ yield
+ gentleman
+ need
+ make
+ year
+ want
+ becaus
+
+Cluster 37: yield
+ mr. chairman
+ amend
+ becaus
+ chairman
+ committe
+ gentleman
+ make
+ member
+ mr. speaker
+
+
+
+mad 0
+mr. 0
+if  2
+i y 5
+we  0
+let 0
+i t 0
+i h 0
+in  0
+how 0
+wel 0
+one 0
+not 0
+wou 0
+i a 1
+am  0
+the 0
+it  0
+yes 0
+add 0
+tha 0
+wil 0
+all 0
+a c 0
+alt 0
+i b 0
+i d 0
+wit 0
+i l 0
+and 0
+i w 1
+als 0
+fir 0
+no  0
+rec 0
+cer 0
+tak 0
+doe 0
+at  0
+par 0
+i r 0
+i o 0
+sir 0
+eac 0
+abs 0
+who 0
+but 0
+jus 0
+i s 0
+tal 0
+as  0
+res 0
+i c 0
+so  0
+san 0
+eit 0
+hop 0
+i u 0
+of  0
+is  0
+why 0
