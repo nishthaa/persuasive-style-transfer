@@ -83,8 +83,8 @@ def tokenize_only(text):
     return filtered_tokens
 
 
-DIR_LINK_TRAIN = "data/convotev1.1/data_stage_one/training_set/"
-DIR_LINK_TEST = "data/convotev1.1/data_stage_one/test_set/"
+DIR_LINK_TRAIN = "/Volumes/Brihi/convotev1.1/data_stage_one/training_set/"
+DIR_LINK_TEST = "/Volumes/Brihi/convotev1.1/data_stage_one/test_set/"
 THRESHOLD = int(sys.argv[1])
 PUNCTUATION = string.punctuation
 print(THRESHOLD)
@@ -283,8 +283,8 @@ for tup in above_threshold:
     word = tup[0]
     max_sim = -1
     if i < 100:
-        mapping[word] = ""
         i += 1
+        continue
     else:
         for wrd in lowORwords:
             wrd = wrd.strip()
