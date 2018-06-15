@@ -1,3 +1,4 @@
 data
 .virtualenvs
 .DS_Store
+*.tar
