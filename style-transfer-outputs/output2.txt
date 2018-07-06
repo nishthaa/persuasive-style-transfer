@@ -1,0 +1,7 @@
+/home/brihi16142/style-transfer/style_decoder/onmt/modules/GlobalAttention.py:$
+  attn.data.masked_fill_(self.mask, -float('inf'))
+/home/brihi16142/style-transfer/style_decoder/onmt/modules/GlobalAttention.py:$
+  attn = self.sm(attn)
+/home/brihi16142/.conda/envs/pst3/lib/python3.6/site-packages/torch/nn/modules$
+  input = module(input)
+PRED AVG SCORE: -6.6904, PRED PPL: 804.6504
